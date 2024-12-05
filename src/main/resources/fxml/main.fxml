@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.bibliotheque.controller.MainController">
+    <VBox spacing="10" padding="10">
+        <HBox spacing="5">
+            <Label text="Titre:"/>
+            <TextField fx:id="titreField"/>
+            <Label text="Auteur:"/>
+            <TextField fx:id="auteurField"/>
+            <Label text="Genre:"/>
+            <TextField fx:id="genreField"/>
+            <Button text="Rechercher" onAction="#handleRechercher"/>
+        </HBox>
+        <TableView fx:id="livreTable">
+            <columns>
+                <TableColumn text="ID" fx:id="idColumn"/>
+                <TableColumn text="Titre" fx:id="titreColumn"/>
+                <TableColumn text="Auteur" fx:id="auteurColumn"/>
+                <TableColumn text="Genre" fx:id="genreColumn"/>
+                <TableColumn text="Disponible" fx:id="disponibleColumn"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane> 
